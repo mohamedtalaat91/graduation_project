@@ -1,0 +1,13 @@
+{% block content %}
+{% load bootstrap4 %}
+
+
+  <form method="post" >
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <input type="submit" value="signup">
+  </form>
+
+  {# Assumes you set up the password_reset view in your URLconf #}
+
+{% endblock %}
